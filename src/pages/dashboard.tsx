@@ -23,9 +23,18 @@ const Dashboard = () => {
       >
         Logado
       </h2>
-      <p style={{ textAlign: "center" }}>
-        <span style={{ fontWeight: "bold" }}>E-mail:</span> {user?.email}
-      </p>
+      <div
+        style={{
+          display: "flex",
+          gap: "5px",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <span style={{ fontWeight: "bold" }}>E-mail:</span>{" "}
+        <p className="data">{user?.email}</p>
+      </div>
       <button style={{ marginTop: "1rem" }} onClick={logOut}>
         Sair
       </button>
