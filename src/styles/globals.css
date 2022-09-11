@@ -22,6 +22,7 @@
   --gray-100: hsl(210, 38%, 95%);
   --gray-300: hsl(0, 0%, 64%);
   --gray-400: hsl(0, 1%, 27%);
+  --gray-700: #2d3748;
   --gray-800: hsl(220, 26%, 14%);
   --gray-900: #171923;
 
@@ -161,6 +162,37 @@ button:hover {
   stroke: hsl(210, 70, 75);
   stroke-linecap: round;
   animation: dash 1.5s ease-in-out infinite;
+}
+
+.data:empty {
+  background: linear-gradient(
+      0.25turn,
+      transparent,
+      var(--gray-300),
+      transparent
+    ),
+    linear-gradient(var(--gray-700), var(--gray-700)),
+    radial-gradient(
+      38px circle at 19px 19px,
+      var(--gray-700) 50%,
+      transparent 51%
+    ),
+    linear-gradient(var(--gray-700), var(--gray-700));
+  background-repeat: no-repeat;
+  background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px;
+  background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
+  animation: loading 1.5s infinite;
+
+  width: 200px;
+  height: 25px;
+  border-radius: 3px;
+  cursor: progress;
+}
+
+@keyframes loading {
+  to {
+    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  }
 }
 
 @keyframes rotate {
